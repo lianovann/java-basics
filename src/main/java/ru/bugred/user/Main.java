@@ -26,7 +26,7 @@ public class Main {
 
         strings.forEach(str -> System.out.println(digesMap.get(str)));
 
-        strings.stream().filter(el -> el.length() == 3).collect(Collectors.toList());
+        List<String> string = strings.stream().filter(el -> el.length() == 3).collect(Collectors.toList());
 
 
 //        User[] users = {EXISTED_USER, NOT_EXISTED_USER};
