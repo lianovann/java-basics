@@ -6,7 +6,7 @@ import io.restassured.http.Cookies;
 import io.restassured.specification.RequestSpecification;
 
 public abstract class RestServices {
-    private static final String BASE_URL = "https://reqres.in/api";
+    private static final String BASE_URL = "http://users.bugred.ru/tasks/rest";
     protected Cookies cookies;
     protected RequestSpecification REQ_SPEC;
 

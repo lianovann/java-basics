@@ -13,7 +13,7 @@ public class UserServices extends RestServices {
 
     @Override
     protected String getBasePath() {
-        return "/users";
+        return "/doregister";
     }
 
     public UserServices(Cookies cookies) {
@@ -21,12 +21,12 @@ public class UserServices extends RestServices {
     }
 
     public CreateUserResponse createUser(UserRequest rq) {
-        return given().body(rq).post().as(CreateUserResponse.class);
+        return given().spec(REQ_SPEC).body(rq).post().as(CreateUserResponse.class);
     }
 
-    public List<UserPojoFull> getUsers() {
-        return given().spec(REQ_SPEC)
-                .get()
-                .jsonPath().getList("data", UserPojoFull.class);
-    }
+//    public List<UserPojoFull> getUsers() {
+//        return given().spec(REQ_SPEC)
+//                .get()
+//                .jsonPath().getList("data", UserPojoFull.class);
+//    }
 }

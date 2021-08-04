@@ -15,6 +15,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserPojo {
     private int id;
 
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    private String message;
+
     /* Аннотация JsonProperty позволяет задать имя ключа, которому соответствует данная переменная.
     * Сама переменная при этом может иметь любое имя. */
     @JsonProperty("email")

@@ -1,9 +1,6 @@
 package ru.bugred.user;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.EnumSource;
@@ -26,6 +23,18 @@ public class OrderTests {
     public void testCreateOrder() {
         System.out.println("check that order was created");
     }
+
+    //    @Test
+//    public void testCreateOrder() {
+//        Assertions.assumeTrue(2>3);
+//        System.out.println("check that order was created");
+//        Assertions.assertAll(
+//                () -> Assertions.assertTrue(2 > 3),
+//                () -> Assertions.assertFalse(2<3));
+//        Assertions.assertThrows(RuntimeException.class, () -> {
+//            return;
+//        });
+//    }
 
     /* Параметризуемый метод, данные хранятся в аннотации @ValueSource в виде строк. */
 
@@ -189,6 +198,8 @@ public class OrderTests {
     /* Параметризуемый метод, данные берутся аннотацией @MethodSource из метода-источника и статичного параметра Roles, объявленного ниже.
      * Фильтруем элементы по шаблону имени — все элементы, имя которых заканчивается на MANAGER.
      * Имя метода-источника можно не указывать, но тогда оно должно совпадать с именем тестового метода */
+
+
 
     @ParameterizedTest
     @MethodSource

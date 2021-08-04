@@ -14,7 +14,7 @@ import static io.restassured.RestAssured.given;
 public class UsersSteps {
     private static final RequestSpecification REQ_SPEC =
             new RequestSpecBuilder()
-                    .setBaseUri("https://reqres.in/api")
+                    .setBaseUri("http://users.bugred.ru/tasks/rest")
                     .setBasePath("/users")
                     .setContentType(ContentType.JSON)
                     .build();
@@ -26,7 +26,7 @@ public class UsersSteps {
     }
 
     public UserPojoFull getUser() {
-        return given().get("/" + user.getId()).as(UserPojoFull.class);
+        return given().get("/" + user.getEmail()).as(UserPojoFull.class);
     }
 
     public static List<UserPojoFull> getUsers() {
